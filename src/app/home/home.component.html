@@ -1,0 +1,14 @@
+<!-- <ng-template [ngIf]=name></ng-template> -->
+
+<!-- <ng-template appNemza = "appNemza"></ng-template> --><div>
+    <!-- <ng-container *ngFor="let name of names"> -->
+    <!-- <ng-template #appNemza></ng-template> --><!-- </ng-container> -->
+</div>
+
+<ng-container *ngFor="let name of names">
+    <ng-container *ngtemplateOutlet="component; context:name">
+        <ng-template #component let-currentComponent="context"></ng-template>
+    </ng-container>
+</ng-container>
+
+<button (click)="createComponents()">Create new Component</button>
